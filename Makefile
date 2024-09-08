@@ -40,7 +40,7 @@ src: $(SRCS)
 $(PROG): $(OBJS)
 	$(CC) $(CFLAGS_N) $(CFLAGS) $(LDFLAGS_N) $(LDFLAGS) $(OBJS) $(LIBS) -o $@
 
-check:
+check: $(PROG)
 	sh test.sh
 
 .PHONY: all clean rebuild install src check
